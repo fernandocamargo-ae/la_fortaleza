@@ -1,16 +1,25 @@
+import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
 import Section from '../ui/Section';
+import Button from '../ui/Button';
 import { SPECIALIZATION } from '../../utils/constants';
 
-export default function Especializacion() {
+export default function Especializacion({
+  limit,
+  title = 'Nuestra Especialización',
+  ctaTo,
+  ctaLabel = 'Ver todos los servicios',
+}) {
+  const items = limit ? SPECIALIZATION.slice(0, limit) : SPECIALIZATION;
+
   return (
     <Section className="bg-bg-dark">
       <Container>
         <h2 className="mb-12 text-center text-3xl font-extrabold uppercase sm:text-4xl">
-          Nuestra Especialización
+          {title}
         </h2>
         <div className="grid gap-6 md:grid-cols-2">
-          {SPECIALIZATION.map((item) => (
+          {items.map((item) => (
             <article key={item.title} className="border border-white/10 bg-surface p-6">
               <h3 className="text-xl font-bold">{item.title}</h3>
               <p className="mt-3 text-sm text-text-muted">{item.description}</p>
@@ -26,6 +35,11 @@ export default function Especializacion() {
             </article>
           ))}
         </div>
+        {ctaTo && (
+          <div className="mt-10 text-center">
+            <Button as={Link} to={ctaTo}>{ctaLabel}</Button>
+          </div>
+        )}
       </Container>
     </Section>
   );
