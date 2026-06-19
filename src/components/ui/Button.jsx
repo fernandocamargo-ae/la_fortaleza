@@ -1,5 +1,5 @@
 const VARIANTS = {
-  primary: 'bg-brand-orange text-bg-darker hover:bg-orange-500',
+  primary: 'bg-brand-orange text-bg-darker hover:bg-brand-orange/90',
   outline: 'border border-white/40 text-text-primary hover:border-brand-orange hover:text-brand-orange',
 };
 

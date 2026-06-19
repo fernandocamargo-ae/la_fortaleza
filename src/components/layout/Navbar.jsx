@@ -44,7 +44,7 @@ export default function Navbar() {
                 {item.label}
               </NavLink>
             ))}
-            <Link to={EMERGENCY_ITEM.path} onClick={() => setOpen(false)} className="bg-brand-orange px-4 py-2 text-center text-xs font-semibold uppercase tracking-wide text-bg-darker">
+            <Link to={EMERGENCY_ITEM.path} onClick={() => setOpen(false)} className="bg-brand-orange px-4 py-2 text-center text-xs font-semibold uppercase tracking-wide text-bg-darker hover:bg-brand-orange/90">
               {EMERGENCY_ITEM.label}
             </Link>
           </Container>

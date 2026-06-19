@@ -8,6 +8,8 @@ import Flotillas from './pages/Flotillas';
 import Nosotros from './pages/Nosotros';
 import Contacto from './pages/Contacto';
 import Emergencia from './pages/Emergencia';
+import Terminos from './pages/Terminos';
+import Privacidad from './pages/Privacidad';
 import NotFound from './pages/NotFound';
 
 export default function AppRoutes() {
@@ -22,6 +24,8 @@ export default function AppRoutes() {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/emergencia" element={<Emergencia />} />
+        <Route path="/terminos" element={<Terminos />} />
+        <Route path="/privacidad" element={<Privacidad />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
