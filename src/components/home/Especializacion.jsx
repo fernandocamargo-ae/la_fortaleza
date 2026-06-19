@@ -24,35 +24,31 @@ export default function Especializacion({
         {compact ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((item, i) => (
-              <Reveal
-                key={item.title}
-                delay={i * 80}
-                className="group border-t-2 border-brand-orange bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:bg-surface/80 hover:shadow-lg hover:shadow-black/30"
-              >
-                <h3 className="text-base font-bold leading-snug">{item.title}</h3>
-                <p className="mt-2 text-sm text-text-muted">{item.summary ?? item.description}</p>
+              <Reveal key={item.title} delay={i * 80} className="h-full">
+                <article className="h-full border-t-2 border-brand-orange bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:bg-surface/80 hover:shadow-lg hover:shadow-black/30">
+                  <h3 className="text-base font-bold leading-snug">{item.title}</h3>
+                  <p className="mt-2 text-sm text-text-muted">{item.summary ?? item.description}</p>
+                </article>
               </Reveal>
             ))}
           </div>
         ) : (
           <div className="grid gap-6 md:grid-cols-2">
             {items.map((item, i) => (
-              <Reveal
-                key={item.title}
-                delay={i * 80}
-                className="group border border-white/10 bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-orange/60 hover:shadow-lg hover:shadow-black/30"
-              >
-                <h3 className="text-xl font-bold">{item.title}</h3>
-                <p className="mt-3 text-sm text-text-muted">{item.description}</p>
-                {item.tags && (
-                  <ul className="mt-4 space-y-1">
-                    {item.tags.map((tag) => (
-                      <li key={tag} className="text-xs font-semibold uppercase tracking-wide text-brand-orange">
-                        ✓ {tag}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+              <Reveal key={item.title} delay={i * 80} className="h-full">
+                <article className="h-full border border-white/10 bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-orange/60 hover:shadow-lg hover:shadow-black/30">
+                  <h3 className="text-xl font-bold">{item.title}</h3>
+                  <p className="mt-3 text-sm text-text-muted">{item.description}</p>
+                  {item.tags && (
+                    <ul className="mt-4 space-y-1">
+                      {item.tags.map((tag) => (
+                        <li key={tag} className="text-xs font-semibold uppercase tracking-wide text-brand-orange">
+                          ✓ {tag}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
               </Reveal>
             ))}
           </div>

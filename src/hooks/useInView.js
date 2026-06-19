@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 
 /**
- * Reveals an element the first time it scrolls into view.
- * Returns [ref, inView]. Animates once, then stops observing.
+ * Tracks whether an element is in the viewport, toggling as it enters and
+ * leaves so reveal animations can replay on every scroll pass.
+ * Returns [ref, inView].
  */
 export default function useInView({ threshold = 0.15, rootMargin = '0px 0px -10% 0px' } = {}) {
   const ref = useRef(null);
@@ -13,12 +14,7 @@ export default function useInView({ threshold = 0.15, rootMargin = '0px 0px -10%
     if (!el) return undefined;
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.unobserve(entry.target);
-        }
-      },
+      ([entry]) => setInView(entry.isIntersecting),
       { threshold, rootMargin },
     );
 

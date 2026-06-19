@@ -28,13 +28,17 @@ export default function Nosotros() {
       {/* Misión y Visión */}
       <Section className="bg-bg-dark">
         <Container className="grid gap-6 md:grid-cols-2">
-          <Reveal as="article" className="border-l-4 border-brand-orange bg-surface p-8 transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/30">
-            <h2 className="text-2xl font-bold uppercase">Misión</h2>
-            <p className="mt-4 text-text-muted">{ABOUT.mission}</p>
+          <Reveal className="h-full">
+            <article className="h-full border-l-4 border-brand-orange bg-surface p-8 transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/30">
+              <h2 className="text-2xl font-bold uppercase">Misión</h2>
+              <p className="mt-4 text-text-muted">{ABOUT.mission}</p>
+            </article>
           </Reveal>
-          <Reveal as="article" delay={120} className="border-l-4 border-brand-slate bg-surface p-8 transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/30">
-            <h2 className="text-2xl font-bold uppercase">Visión</h2>
-            <p className="mt-4 text-text-muted">{ABOUT.vision}</p>
+          <Reveal delay={120} className="h-full">
+            <article className="h-full border-l-4 border-brand-slate bg-surface p-8 transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/30">
+              <h2 className="text-2xl font-bold uppercase">Visión</h2>
+              <p className="mt-4 text-text-muted">{ABOUT.vision}</p>
+            </article>
           </Reveal>
         </Container>
       </Section>
