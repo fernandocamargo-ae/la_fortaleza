@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Especializacion limit={3} ctaTo="/servicios" />
+      <Especializacion compact title="Nuestros Servicios" ctaTo="/servicios" />
       <CTABanner />
     </>
   );
