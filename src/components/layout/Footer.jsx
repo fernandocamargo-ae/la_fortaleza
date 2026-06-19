@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <p className="text-xl font-extrabold text-brand-orange">LA FORTALEZA</p>
           <p className="mt-3 text-sm text-text-muted">
-            © 2026 Servicios y Ventas La Fortaleza.
+            © 2026 Servicios y Ventas La Fortaleza. Expertos en Potencia Pesada.
           </p>
         </div>
         <div>
