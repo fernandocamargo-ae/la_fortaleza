@@ -1,2 +1,15 @@
-import Placeholder from '../components/layout/Placeholder';
-export default function Home() { return <Placeholder title="Home (en construcción)" />; }
+import Hero from '../components/home/Hero';
+import Especializacion from '../components/home/Especializacion';
+import MatrizCompatibilidad from '../components/home/MatrizCompatibilidad';
+import CTABanner from '../components/home/CTABanner';
+
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      <Especializacion />
+      <MatrizCompatibilidad />
+      <CTABanner />
+    </>
+  );
+}
