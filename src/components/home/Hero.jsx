@@ -14,8 +14,9 @@ export default function Hero() {
           Soluciones técnicas para equipo pesado
         </h1>
         <p className="mt-6 max-w-xl text-text-muted">
-          Especialistas en optimización electrónica y mecánica. Elevamos la productividad
-          de su flota mediante tecnología de precisión y cumplimiento normativo.
+          Especialistas en eliminación de sistemas de postratamiento (EGR, DPF y DEF) y
+          reprogramación de potencia. Maximizamos el rendimiento de su flota y reducimos
+          fallas costosas, con cumplimiento vial certificado.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Button as={Link} to="/contacto">Agendar servicio</Button>

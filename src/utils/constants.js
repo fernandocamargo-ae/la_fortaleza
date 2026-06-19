@@ -11,27 +11,43 @@ export const EMERGENCY_ITEM = { label: 'Asistencia de Emergencia', path: '/emerg
 
 export const SPECIALIZATION = [
   {
-    title: 'Eliminación de Sistemas de Postratamiento',
+    title: 'Eliminación de Sistemas de Postratamiento (EGR, DPF y DEF)',
     description:
-      'Optimización integral de software para suprimir sistemas DPF, SCR y EGR. Reduce costos de mantenimiento y tiempos de inactividad por fallos de regeneración.',
-    tags: ['Desactivación DPF/DEF', 'Eliminación bloqueo EGR', 'Software OEM certificado'],
+      'Desactivación y optimización de sistemas de recirculación de gases y reducción catalítica para evitar fallas crónicas, pérdidas de potencia y costosos tiempos de inactividad. Solución especializada para motores multimarca.',
+    tags: ['CAT · Cummins · Volvo · Detroit', 'Maxxforce · Hino', 'Mitsubishi · Isuzu y más'],
   },
   {
-    title: 'Aumento de Potencia (Chiptuning)',
+    title: 'Aumento de Potencia (Chiptuning / Reprogramación)',
     description:
-      'Maximizamos el torque y los HP de su motor sin comprometer la integridad estructural. Ganancias de hasta un 25% en eficiencia dinámica.',
+      'Ajuste electrónico de los parámetros del motor para incrementar el torque y los caballos de fuerza (HP), permitiendo que los vehículos enfrenten altas cargas y terrenos difíciles con mayor facilidad.',
   },
   {
-    title: 'Certificado de Limitador (PROVIAL)',
+    title: 'Certificado de Limitador de Velocidad a 80km/h (PROVIAL)',
     description:
-      'Instalación y calibración de limitadores de velocidad a 80km/h bajo la normativa técnica PROVIAL. Entrega de certificación inmediata para cumplimiento legal.',
+      'Instalación, calibración y emisión de la certificación oficial del gobernador o limitador de velocidad, garantizando el cumplimiento estricto de las normativas viales vigentes.',
   },
   {
-    title: 'Auxilio en Ruta 24/7',
+    title: 'Auxilio en Ruta',
     description:
-      'Diagnóstico computarizado y reparaciones mecánicas in-situ. Cobertura nacional para flota pesada.',
+      'Servicio de asistencia mecánica de emergencia y diagnóstico computarizado directamente en el lugar de la falla, minimizando los tiempos muertos del transporte en las principales carreteras.',
+  },
+  {
+    title: 'Reducción de Consumo de Combustible',
+    description:
+      'Optimización de la gestión del motor para lograr una combustión más eficiente, traduciéndose en un ahorro significativo en los costos operativos por kilómetro recorrido.',
   },
 ];
+
+export const ABOUT = {
+  origin: [
+    'Servicios y Ventas La Fortaleza nace de una necesidad crítica identificada en el departamento: la urgencia de optimizar el rendimiento de los vehículos de carga y transporte pesado. Las altas exigencias operativas y las grandes cargas a las que se someten estos vehículos demandan una potencia superior y una reducción de fallas mecánicas costosas.',
+    'Ante la recurrencia de problemas técnicos relacionados con los sistemas de control de emisiones en la región, la empresa se fundó para ofrecer una solución definitiva mediante la eliminación especializada de sistemas de postratamiento y la reprogramación de potencia, permitiendo a los transportistas mantener la rentabilidad y continuidad de sus operaciones.',
+  ],
+  mission:
+    'Optimizar el rendimiento, la eficiencia y la seguridad de los vehículos de transporte y carga pesada a través de soluciones técnicas avanzadas y certificadas. En Servicios y Ventas La Fortaleza nos comprometemos a brindar un soporte integral en ruta y un servicio de ingeniería automotriz de la más alta calidad, garantizando la continuidad operativa y la rentabilidad de nuestros clientes.',
+  vision:
+    'Ser la empresa líder a nivel regional en optimización de motores y soluciones de cumplimiento vial para el transporte pesado, reconocidos por nuestra excelencia técnica, capacidad de respuesta inmediata y por ser el aliado estratégico de confianza para flotas y transportistas individuales.',
+};
 
 export const COMPAT_MATRIX = [
   { brand: 'Caterpillar (CAT)', systems: 'EGR, DPF, DEF, Potencia', application: 'Pesado / Maquinaria industrial' },
