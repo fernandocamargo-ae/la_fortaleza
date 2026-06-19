@@ -2,7 +2,7 @@ import Container from '../ui/Container';
 import Section from '../ui/Section';
 import { COMPAT_MATRIX } from '../../utils/constants';
 
-const HEADERS = ['Marca de Motor', 'Modelos Soportados', 'Eliminación Post.', 'Chiptuning', 'Estado'];
+const HEADERS = ['Marca del Motor', 'Sistemas Soportados', 'Aplicación Sugerida en Web'];
 
 export default function MatrizCompatibilidad() {
   return (
@@ -23,14 +23,8 @@ export default function MatrizCompatibilidad() {
               {COMPAT_MATRIX.map((row) => (
                 <tr key={row.brand} className="border-b border-white/5">
                   <td className="py-4 pr-4 font-bold">{row.brand}</td>
-                  <td className="py-4 pr-4 text-text-muted">{row.models}</td>
-                  <td className="py-4 pr-4 font-semibold text-brand-orange">{row.postTreatment}</td>
-                  <td className="py-4 pr-4 font-semibold text-brand-orange">{row.chiptuning}</td>
-                  <td className="py-4 pr-4">
-                    <span className="inline-block border border-green-500/40 px-2 py-1 text-xs font-semibold uppercase text-green-400">
-                      {row.status}
-                    </span>
-                  </td>
+                  <td className="py-4 pr-4 font-semibold text-brand-orange">{row.systems}</td>
+                  <td className="py-4 pr-4 text-text-muted">{row.application}</td>
                 </tr>
               ))}
             </tbody>

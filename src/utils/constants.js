@@ -34,11 +34,11 @@ export const SPECIALIZATION = [
 ];
 
 export const COMPAT_MATRIX = [
-  { brand: 'CUMMINS', models: 'ISX, ISM, ISL, ISB, QSK', postTreatment: 'DISPONIBLE', chiptuning: 'DISPONIBLE', status: 'CERTIFICADO' },
-  { brand: 'CATERPILLAR', models: 'C12, C13, C15 ACERT, 3406E', postTreatment: 'DISPONIBLE', chiptuning: 'DISPONIBLE', status: 'CERTIFICADO' },
-  { brand: 'DETROIT DIESEL', models: 'DD13, DD15, SERIES 60', postTreatment: 'DISPONIBLE', chiptuning: 'DISPONIBLE', status: 'CERTIFICADO' },
-  { brand: 'VOLVO / MACK', models: 'D11, D13, D16, MP7, MP8', postTreatment: 'DISPONIBLE', chiptuning: 'DISPONIBLE', status: 'CERTIFICADO' },
-  { brand: 'HINO / ISUZU', models: 'J08, N04, 4HK1, 6HK1', postTreatment: 'DISPONIBLE', chiptuning: 'DISPONIBLE', status: 'CERTIFICADO' },
+  { brand: 'Caterpillar (CAT)', systems: 'EGR, DPF, DEF, Potencia', application: 'Pesado / Maquinaria industrial' },
+  { brand: 'Cummins', systems: 'EGR, DPF, DEF, Potencia', application: 'Comercial / Carga Pesada' },
+  { brand: 'Volvo / Detroit', systems: 'EGR, DPF, DEF, Potencia', application: 'Transporte de larga distancia' },
+  { brand: 'MaxxForce', systems: 'EGR, DPF, DEF, Potencia', application: 'Camiones medianos y pesados' },
+  { brand: 'Hino / Mitsubishi / Isuzu', systems: 'EGR, DPF, DEF, Potencia', application: 'Comercial ligero y urbano' },
 ];
 
 export const FOOTER_LINKS = [
@@ -50,7 +50,7 @@ export const FOOTER_LINKS = [
 ];
 
 export const CONTACT_INFO = {
-  address: 'Zona Industrial, Ciudad de Guatemala, GT.',
-  phone: '+502 2000-0000',
-  email: 'info@lafortaleza.com.gt',
+  address: '4.ª Avenida, Lote 359, Colonia Sebastopol, Zona 3, Escuintla, Guatemala',
+  phone: '+502 40665192 / +502 31663239',
+  email: 'Lforta001@gmail.com',
 };
