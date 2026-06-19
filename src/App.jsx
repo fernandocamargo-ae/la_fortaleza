@@ -1,7 +1,4 @@
-function App() {
-  return (
-    <h1 className="text-brand-orange text-4xl">Tailwind OK</h1>
-  )
+import AppRoutes from './routes';
+export default function App() {
+  return <AppRoutes />;
 }
-
-export default App
