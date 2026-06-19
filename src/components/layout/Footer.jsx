@@ -23,7 +23,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-text-muted">Sede central</p>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-text-muted">Ubicación</p>
           <address className="space-y-2 text-sm not-italic text-text-primary">
             <p>{CONTACT_INFO.address}</p>
             <p>{CONTACT_INFO.phone}</p>

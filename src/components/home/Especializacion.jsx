@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
 import Section from '../ui/Section';
 import Button from '../ui/Button';
+import Reveal from '../ui/Reveal';
 import { SPECIALIZATION } from '../../utils/constants';
 
 export default function Especializacion({
@@ -16,23 +17,31 @@ export default function Especializacion({
   return (
     <Section className="bg-bg-dark">
       <Container>
-        <h2 className="mb-12 text-center text-3xl font-extrabold uppercase sm:text-4xl">
+        <Reveal as="h2" className="mb-12 text-center text-3xl font-extrabold uppercase sm:text-4xl">
           {title}
-        </h2>
+        </Reveal>
 
         {compact ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {items.map((item) => (
-              <article key={item.title} className="border-t-2 border-brand-orange bg-surface p-6">
+            {items.map((item, i) => (
+              <Reveal
+                key={item.title}
+                delay={i * 80}
+                className="group border-t-2 border-brand-orange bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:bg-surface/80 hover:shadow-lg hover:shadow-black/30"
+              >
                 <h3 className="text-base font-bold leading-snug">{item.title}</h3>
                 <p className="mt-2 text-sm text-text-muted">{item.summary ?? item.description}</p>
-              </article>
+              </Reveal>
             ))}
           </div>
         ) : (
           <div className="grid gap-6 md:grid-cols-2">
-            {items.map((item) => (
-              <article key={item.title} className="border border-white/10 bg-surface p-6">
+            {items.map((item, i) => (
+              <Reveal
+                key={item.title}
+                delay={i * 80}
+                className="group border border-white/10 bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-orange/60 hover:shadow-lg hover:shadow-black/30"
+              >
                 <h3 className="text-xl font-bold">{item.title}</h3>
                 <p className="mt-3 text-sm text-text-muted">{item.description}</p>
                 {item.tags && (
@@ -44,15 +53,15 @@ export default function Especializacion({
                     ))}
                   </ul>
                 )}
-              </article>
+              </Reveal>
             ))}
           </div>
         )}
 
         {ctaTo && (
-          <div className="mt-10 text-center">
+          <Reveal delay={120} className="mt-10 text-center">
             <Button as={Link} to={ctaTo}>{ctaLabel}</Button>
-          </div>
+          </Reveal>
         )}
       </Container>
     </Section>
