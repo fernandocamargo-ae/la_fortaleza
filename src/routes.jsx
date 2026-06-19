@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 import Servicios from './pages/Servicios';
 import Motores from './pages/Motores';
@@ -12,15 +13,17 @@ import NotFound from './pages/NotFound';
 export default function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/servicios" element={<Servicios />} />
-      <Route path="/motores" element={<Motores />} />
-      <Route path="/repuestos" element={<Repuestos />} />
-      <Route path="/flotillas" element={<Flotillas />} />
-      <Route path="/nosotros" element={<Nosotros />} />
-      <Route path="/contacto" element={<Contacto />} />
-      <Route path="/emergencia" element={<Emergencia />} />
-      <Route path="*" element={<NotFound />} />
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/servicios" element={<Servicios />} />
+        <Route path="/motores" element={<Motores />} />
+        <Route path="/repuestos" element={<Repuestos />} />
+        <Route path="/flotillas" element={<Flotillas />} />
+        <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/emergencia" element={<Emergencia />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
     </Routes>
   );
 }
