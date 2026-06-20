@@ -16,7 +16,18 @@ Landing multi-página para La Fortaleza (Servicios y Ventas), construida con Rea
 - `src/utils/constants.js` — datos de navegación y matriz de compatibilidad
 - `src/styles/` — tokens y estilos globales
 
-## Backend futuro
-Define `VITE_API_URL` en un archivo `.env` (ver `.env.example`). Para activar el envío real
-del formulario de contacto, cambia el cuerpo de `sendContactForm` en
-`src/services/contactService.js` por `return apiClient.post('/contact', data);`.
+## Formulario de contacto (Formspree)
+El formulario de `/contacto` envía mediante [Formspree](https://formspree.io) (sin backend):
+
+1. Crea una cuenta en Formspree y un formulario nuevo, con destino `Lforta001@gmail.com`.
+2. Copia el endpoint del formulario (`https://formspree.io/f/xxxxxxx`).
+3. Crea un archivo `.env` en la raíz (ver `.env.example`) con:
+   `VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/xxxxxxx`
+4. Reinicia `npm run dev`. La primera vez, Formspree envía un correo de confirmación
+   para activar el formulario.
+
+Si la variable no está definida, el envío usa un mock (no manda nada) para no romper el desarrollo.
+
+## Backend propio (opcional, futuro)
+La capa `src/services/apiClient.js` queda lista para un backend: define `VITE_API_URL` y
+úsala desde un servicio propio cuando exista.
