@@ -1,8 +1,8 @@
+// Motores, Repuestos y Flotillas quedan fuera del menú por ahora; sus páginas y
+// rutas siguen en el código (src/pages, src/routes.jsx) para reactivarlas cuando
+// haya requerimiento.
 export const NAV_ITEMS = [
   { label: 'Servicios', path: '/servicios' },
-  { label: 'Motores', path: '/motores' },
-  { label: 'Repuestos', path: '/repuestos' },
-  { label: 'Flotillas', path: '/flotillas' },
   { label: 'Nosotros', path: '/nosotros' },
   { label: 'Contacto', path: '/contacto' },
 ];
