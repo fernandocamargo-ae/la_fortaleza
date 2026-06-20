@@ -16,25 +16,37 @@ export default function Servicios() {
     <>
       {/* Encabezado */}
       <section className="relative overflow-hidden bg-bg-darker">
-        <BackgroundCarousel
-          images={HERO_IMAGES}
-          overlayClassName="bg-gradient-to-r from-bg-darker via-bg-darker/95 to-bg-darker/70"
-        />
-        <Container className="relative z-10 py-20 sm:py-28">
-          <Reveal as="p" className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">
-            Portafolio de Servicios
-          </Reveal>
-          <Reveal as="h1" delay={100} className="max-w-3xl text-4xl font-extrabold uppercase leading-tight sm:text-6xl">
-            Soluciones técnicas para equipo pesado
-          </Reveal>
-          <Reveal as="p" delay={200} className="mt-6 max-w-2xl text-text-muted">
-            Servicios especializados de ingeniería automotriz para carga y transporte pesado:
-            eliminación de sistemas de postratamiento, reprogramación de potencia, cumplimiento
-            vial certificado y asistencia en ruta.
-          </Reveal>
-          <Reveal delay={300} className="mt-8 flex flex-wrap gap-4">
-            <Button as={Link} to="/contacto">Agendar servicio</Button>
-            <Button as={Link} to="/emergencia" variant="outline">Auxilio en ruta</Button>
+        <div className="absolute inset-0 bg-gradient-to-r from-bg-darker via-bg-darker to-bg-dark" aria-hidden />
+        <Container className="relative z-10 grid items-center gap-12 py-20 sm:py-28 lg:grid-cols-2">
+          {/* Texto */}
+          <div>
+            <Reveal as="p" className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">
+              Portafolio de Servicios
+            </Reveal>
+            <Reveal as="h1" delay={100} className="max-w-2xl text-4xl font-extrabold uppercase leading-tight sm:text-6xl">
+              Soluciones técnicas para equipo pesado
+            </Reveal>
+            <Reveal as="p" delay={200} className="mt-6 max-w-xl text-text-muted">
+              Servicios especializados de ingeniería automotriz para carga y transporte pesado:
+              eliminación de sistemas de postratamiento, reprogramación de potencia, cumplimiento
+              vial certificado y asistencia en ruta.
+            </Reveal>
+            <Reveal delay={300} className="mt-8 flex flex-wrap gap-4">
+              <Button as={Link} to="/contacto">Agendar servicio</Button>
+              <Button as={Link} to="/emergencia" variant="outline">Auxilio en ruta</Button>
+            </Reveal>
+          </div>
+
+          {/* Carrusel enmarcado */}
+          <Reveal delay={200} className="flex justify-center lg:justify-end">
+            <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl shadow-2xl shadow-black/60 ring-1 ring-white/10">
+              <BackgroundCarousel
+                images={HERO_IMAGES}
+                interval={4000}
+                showDots
+                overlayClassName="bg-gradient-to-t from-black/40 via-transparent to-transparent"
+              />
+            </div>
           </Reveal>
         </Container>
       </section>

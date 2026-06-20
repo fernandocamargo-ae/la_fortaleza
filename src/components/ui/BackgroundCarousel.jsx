@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 
 /**
- * Decorative background carousel: cross-fades through a set of images behind
- * its parent's content. Place inside a `relative` container; the foreground
- * content should sit above it (e.g. with `relative z-10`). An overlay keeps
- * text readable. Auto-advance pauses under reduced-motion (shows first image).
+ * Cross-fading image carousel. Fills its nearest `relative` parent (use a sized
+ * framed box for a gallery, or a full section for a background). Auto-advances,
+ * pausing under reduced motion (shows the first image). Optional clickable dots.
  */
 export default function BackgroundCarousel({
   images,
   interval = 5000,
   className = '',
   overlayClassName = 'bg-gradient-to-r from-bg-darker via-bg-darker/95 to-bg-darker/75',
+  showDots = false,
 }) {
   const [index, setIndex] = useState(0);
   const [reduced, setReduced] = useState(false);
@@ -30,7 +30,7 @@ export default function BackgroundCarousel({
   }, [reduced, images.length, interval]);
 
   return (
-    <div className={`pointer-events-none absolute inset-0 overflow-hidden ${className}`} aria-hidden>
+    <div className={`pointer-events-none absolute inset-0 overflow-hidden ${className}`} aria-hidden={!showDots}>
       {images.map((src, i) => (
         <img
           key={src}
@@ -43,6 +43,22 @@ export default function BackgroundCarousel({
         />
       ))}
       <div className={`absolute inset-0 ${overlayClassName}`} />
+
+      {showDots && images.length > 1 && (
+        <div className="pointer-events-auto absolute inset-x-0 bottom-3 z-10 flex justify-center gap-2">
+          {images.map((src, i) => (
+            <button
+              key={src}
+              type="button"
+              aria-label={`Ver imagen ${i + 1}`}
+              onClick={() => setIndex(i)}
+              className={`h-2 rounded-full transition-all ${
+                i === index ? 'w-6 bg-brand-orange' : 'w-2 bg-white/50 hover:bg-white/80'
+              }`}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
