@@ -49,14 +49,20 @@ export default function Contacto() {
           Hablemos de sus unidades
         </Reveal>
         <Reveal as="p" delay={200} className="mt-4 max-w-2xl text-text-muted">
-          Cuéntenos qué necesita y le responderemos con un diagnóstico o cotización a la medida.
-          También puede contactarnos por los medios directos.
+          Déjenos sus datos de contacto y un asesor de La Fortaleza se comunicará con usted
+          para brindarle un diagnóstico o cotización a la medida. También puede escribirnos
+          por los medios directos.
         </Reveal>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-[1.5fr_1fr]">
           {/* Formulario */}
           <Reveal>
             <form onSubmit={handleSubmit} className="space-y-5 rounded-xl border border-white/10 bg-surface p-6 sm:p-8" noValidate>
+              <div className="rounded-md border border-brand-orange/30 bg-brand-orange/5 px-4 py-3 text-sm text-text-muted">
+                Ingrese <span className="font-semibold text-text-primary">sus datos de contacto</span>. Con esta
+                información, <span className="font-semibold text-text-primary">La Fortaleza</span> se comunicará con
+                usted para dar seguimiento a su solicitud.
+              </div>
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                   <label htmlFor="name" className={labelClass}>Nombre</label>
