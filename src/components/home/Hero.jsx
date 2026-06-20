@@ -15,9 +15,12 @@ export default function Hero() {
             Ingeniería de alto rendimiento
           </Reveal>
           <Reveal as="h1" delay={100} className="max-w-2xl text-4xl font-extrabold uppercase leading-tight sm:text-6xl">
-            Soluciones técnicas para equipo pesado
+            Diagnóstico especializado en camiones
           </Reveal>
-          <Reveal as="p" delay={200} className="mt-6 max-w-xl text-text-muted">
+          <Reveal as="p" delay={150} className="mt-4 text-xl font-semibold text-brand-orange sm:text-2xl">
+            Cuida la economía de tu vehículo.
+          </Reveal>
+          <Reveal as="p" delay={250} className="mt-5 max-w-xl text-text-muted">
             Especialistas en eliminación de sistemas de postratamiento (EGR, DPF y DEF) y
             reprogramación de potencia. Maximizamos el rendimiento de sus unidades y reducimos
             fallas costosas, con cumplimiento vial certificado.

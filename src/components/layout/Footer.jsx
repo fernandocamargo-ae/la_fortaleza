@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
-import { FOOTER_LINKS, CONTACT_INFO } from '../../utils/constants';
+import { FOOTER_LINKS, CONTACT_INFO, SOCIAL_LINKS } from '../../utils/constants';
 
 const iconProps = {
   className: 'mt-0.5 h-5 w-5 shrink-0 text-brand-orange',
@@ -39,6 +39,25 @@ function MailIcon() {
   );
 }
 
+function InstagramIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-5 w-5"
+      aria-hidden
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="border-t-2 border-brand-orange bg-bg-darker">
@@ -48,6 +67,23 @@ export default function Footer() {
           <p className="mt-3 text-sm text-text-muted">
             © 2026 Servicios y Ventas La Fortaleza. Expertos en Potencia Pesada.
           </p>
+          <div className="mt-5">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-text-muted">Síguenos</p>
+            <div className="flex gap-3">
+              {SOCIAL_LINKS.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-text-primary transition-colors hover:border-brand-orange hover:text-brand-orange"
+                >
+                  <InstagramIcon />
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div>

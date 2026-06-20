@@ -63,11 +63,9 @@ export const COMPAT_MATRIX = [
 ];
 
 export const FOOTER_LINKS = [
+  { label: 'Servicios', path: '/servicios' },
   { label: 'Certificación PROVIAL', path: '/servicios' },
-  { label: 'Términos de Servicio', path: '/terminos' },
-  { label: 'Política de Privacidad', path: '/privacidad' },
-  { label: 'Soporte Técnico', path: '/contacto' },
-  { label: 'Contacto', path: '/contacto' },
+  { label: 'Nosotros', path: '/nosotros' },
 ];
 
 export const CONTACT_INFO = {
@@ -75,3 +73,10 @@ export const CONTACT_INFO = {
   phones: ['+502 4066 5192', '+502 3166 3239'],
   email: 'Lforta001@gmail.com',
 };
+
+export const SOCIAL_LINKS = [
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/lafortaleza74/',
+  },
+];
