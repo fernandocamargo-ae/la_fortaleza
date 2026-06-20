@@ -72,6 +72,6 @@ export const FOOTER_LINKS = [
 
 export const CONTACT_INFO = {
   address: '4.ª Avenida, Lote 359, Colonia Sebastopol, Zona 3, Escuintla, Guatemala',
-  phone: '+502 40665192 / +502 31663239',
+  phones: ['+502 4066 5192', '+502 3166 3239'],
   email: 'Lforta001@gmail.com',
 };
