@@ -64,8 +64,6 @@ export const COMPAT_MATRIX = [
 
 export const FOOTER_LINKS = [
   { label: 'Servicios', path: '/servicios' },
-  { label: 'Certificación PROVIAL', path: '/servicios' },
-  { label: 'Nosotros', path: '/nosotros' },
 ];
 
 export const CONTACT_INFO = {
