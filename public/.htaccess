@@ -1,0 +1,25 @@
+# SPA routing para React Router en Apache (Hostinger).
+# El sitio vive en la subcarpeta /lfortaleza/ (https://novacodefc.com/lfortaleza).
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /lfortaleza/
+
+  # No reescribir archivos o carpetas que sí existen (assets, imágenes, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Cualquier otra ruta la maneja index.html (la app de React)
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Cache de assets con hash (1 año); el HTML no se cachea para tomar cambios.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
