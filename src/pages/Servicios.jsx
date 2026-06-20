@@ -2,16 +2,25 @@ import { Link } from 'react-router-dom';
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
 import Reveal from '../components/ui/Reveal';
+import BackgroundCarousel from '../components/ui/BackgroundCarousel';
 import Especializacion from '../components/home/Especializacion';
 import MatrizCompatibilidad from '../components/home/MatrizCompatibilidad';
+import servicios1 from '../assets/images/servicios1.png';
+import servicios2 from '../assets/images/servicios2.png';
+import servicios3 from '../assets/images/servicios3.png';
+
+const HERO_IMAGES = [servicios1, servicios2, servicios3];
 
 export default function Servicios() {
   return (
     <>
       {/* Encabezado */}
       <section className="relative overflow-hidden bg-bg-darker">
-        <div className="absolute inset-0 bg-gradient-to-r from-bg-darker via-bg-darker/95 to-bg-dark" aria-hidden />
-        <Container className="relative py-20 sm:py-28">
+        <BackgroundCarousel
+          images={HERO_IMAGES}
+          overlayClassName="bg-gradient-to-r from-bg-darker via-bg-darker/95 to-bg-darker/70"
+        />
+        <Container className="relative z-10 py-20 sm:py-28">
           <Reveal as="p" className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">
             Portafolio de Servicios
           </Reveal>
