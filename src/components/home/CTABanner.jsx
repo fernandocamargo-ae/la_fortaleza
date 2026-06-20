@@ -9,7 +9,7 @@ export default function CTABanner() {
       <Container className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
         <Reveal className="max-w-xl">
           <h2 className="text-3xl font-extrabold uppercase text-bg-darker sm:text-4xl">
-            ¿Listo para potenciar su flota?
+            ¿Listo para potenciar sus unidades?
           </h2>
           <p className="mt-2 text-bg-darker/80">
             Contacte hoy mismo con un experto y obtenga un diagnóstico personalizado de sus unidades.

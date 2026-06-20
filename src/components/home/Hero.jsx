@@ -19,7 +19,7 @@ export default function Hero() {
           </Reveal>
           <Reveal as="p" delay={200} className="mt-6 max-w-xl text-text-muted">
             Especialistas en eliminación de sistemas de postratamiento (EGR, DPF y DEF) y
-            reprogramación de potencia. Maximizamos el rendimiento de su flota y reducimos
+            reprogramación de potencia. Maximizamos el rendimiento de sus unidades y reducimos
             fallas costosas, con cumplimiento vial certificado.
           </Reveal>
           <Reveal delay={300} className="mt-8 flex flex-wrap gap-4">
