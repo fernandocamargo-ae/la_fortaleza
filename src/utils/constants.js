@@ -1,3 +1,7 @@
+// Dominio canónico del sitio en producción (sin barra final). Se usa para
+// canonical URLs, Open Graph y el sitemap.
+export const SITE_URL = 'https://lafortalezagt.com';
+
 // Motores, Repuestos y Flotillas quedan fuera del menú por ahora; sus páginas y
 // rutas siguen en el código (src/pages, src/routes.jsx) para reactivarlas cuando
 // haya requerimiento.

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Seo from '../components/seo/Seo';
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
 import Reveal from '../components/ui/Reveal';
@@ -14,6 +15,11 @@ const HERO_IMAGES = [servicios1, servicios2, servicios3];
 export default function Servicios() {
   return (
     <>
+      <Seo
+        title="Servicios: eliminación de EGR, DPF y DEF, chiptuning y PROVIAL"
+        path="/servicios"
+        description="Portafolio de servicios para equipo pesado: eliminación de sistemas de postratamiento (EGR, DPF, DEF), aumento de potencia (chiptuning / reprogramación), certificado de limitador de velocidad PROVIAL, auxilio en ruta y reducción de consumo de combustible."
+      />
       {/* Encabezado */}
       <section className="relative overflow-hidden bg-bg-darker">
         <div className="absolute inset-0 bg-gradient-to-r from-bg-darker via-bg-darker to-bg-dark" aria-hidden />

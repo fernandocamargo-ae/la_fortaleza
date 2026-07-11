@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Seo from '../components/seo/Seo';
 import Container from '../components/ui/Container';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
@@ -8,6 +9,11 @@ import { ABOUT } from '../utils/constants';
 export default function Nosotros() {
   return (
     <>
+      <Seo
+        title="Nosotros"
+        path="/nosotros"
+        description="Servicios y Ventas La Fortaleza: especialistas en optimización de motores y cumplimiento vial para el transporte pesado en Guatemala. Conozca nuestro origen, misión y visión."
+      />
       {/* Origen */}
       <Section className="bg-bg-darker">
         <Container>

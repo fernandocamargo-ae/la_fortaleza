@@ -1,8 +1,8 @@
 # SPA routing para React Router en Apache (Hostinger).
-# El sitio vive en la subcarpeta /lfortaleza/ (https://novacodefc.com/lfortaleza).
+# El sitio vive en la raíz del dominio (https://lafortalezagt.com).
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /lfortaleza/
+  RewriteBase /
 
   # No reescribir archivos o carpetas que sí existen (assets, imágenes, etc.)
   RewriteCond %{REQUEST_FILENAME} -f [OR]

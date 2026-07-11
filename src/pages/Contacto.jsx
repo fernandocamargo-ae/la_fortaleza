@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Seo from '../components/seo/Seo';
 import Container from '../components/ui/Container';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
@@ -41,6 +42,11 @@ export default function Contacto() {
 
   return (
     <Section className="bg-bg-darker">
+      <Seo
+        title="Contacto"
+        path="/contacto"
+        description="Contáctenos para un diagnóstico o cotización: eliminación de EGR/DPF/DEF, reprogramación de potencia, certificado PROVIAL y auxilio en ruta. Escuintla, Guatemala. Tel. +502 4066 5192."
+      />
       <Container>
         <Reveal as="p" className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">
           Contacto
