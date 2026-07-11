@@ -11,6 +11,8 @@ import Emergencia from './pages/Emergencia';
 import Terminos from './pages/Terminos';
 import Privacidad from './pages/Privacidad';
 import NotFound from './pages/NotFound';
+import ServicePage from './pages/ServicePage';
+import { SERVICE_PAGES } from './data/servicePages';
 
 export default function AppRoutes() {
   return (
@@ -18,6 +20,9 @@ export default function AppRoutes() {
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/servicios" element={<Servicios />} />
+        {SERVICE_PAGES.map((s) => (
+          <Route key={s.slug} path={`/${s.slug}`} element={<ServicePage slug={s.slug} />} />
+        ))}
         <Route path="/motores" element={<Motores />} />
         <Route path="/repuestos" element={<Repuestos />} />
         <Route path="/flotillas" element={<Flotillas />} />

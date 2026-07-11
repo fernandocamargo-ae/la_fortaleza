@@ -15,6 +15,7 @@ export const EMERGENCY_ITEM = { label: 'Asistencia de Emergencia', path: '/emerg
 
 export const SPECIALIZATION = [
   {
+    slug: 'eliminacion-egr-dpf-def',
     title: 'Eliminación de Sistemas de Postratamiento (EGR, DPF y DEF)',
     summary: 'Desactivación de EGR, DPF y DEF para eliminar fallas crónicas y recuperar potencia.',
     description:
@@ -22,24 +23,28 @@ export const SPECIALIZATION = [
     tags: ['CAT · Cummins · Volvo · Detroit', 'Maxxforce · Hino', 'Mitsubishi · Isuzu y más'],
   },
   {
+    slug: 'reprogramacion-potencia',
     title: 'Aumento de Potencia (Chiptuning / Reprogramación)',
     summary: 'Reprogramación que incrementa torque y HP para cargas y terrenos exigentes.',
     description:
       'Ajuste electrónico de los parámetros del motor para incrementar el torque y los caballos de fuerza (HP), permitiendo que los vehículos enfrenten altas cargas y terrenos difíciles con mayor facilidad.',
   },
   {
+    slug: 'certificado-provial',
     title: 'Certificado de Limitador de Velocidad a 80km/h (PROVIAL)',
     summary: 'Calibración y certificación oficial del limitador a 80 km/h, avalada por PROVIAL.',
     description:
       'Instalación, calibración y emisión de la certificación oficial del gobernador o limitador de velocidad, garantizando el cumplimiento estricto de las normativas viales vigentes.',
   },
   {
+    slug: 'auxilio-en-ruta',
     title: 'Auxilio en Ruta',
     summary: 'Asistencia mecánica de emergencia y diagnóstico en el lugar de la falla.',
     description:
       'Servicio de asistencia mecánica de emergencia y diagnóstico computarizado directamente en el lugar de la falla, minimizando los tiempos muertos del transporte en las principales carreteras.',
   },
   {
+    slug: 'reduccion-consumo-combustible',
     title: 'Reducción de Consumo de Combustible',
     summary: 'Gestión optimizada del motor para ahorrar combustible por kilómetro recorrido.',
     description:
