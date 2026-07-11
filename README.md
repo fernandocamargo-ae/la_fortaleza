@@ -5,8 +5,17 @@ Landing multi-página para La Fortaleza (Servicios y Ventas), construida con Rea
 ## Scripts
 - `npm install` — instala dependencias
 - `npm run dev` — servidor de desarrollo
-- `npm run build` — build de producción
+- `npm run build` — build de producción (SPA)
+- `npm run build:seo` — build + **prerender** (recomendado para publicar): genera HTML
+  estático por ruta para SEO y previews sociales. Usa este para el `dist/` que subís al host.
 - `npm run preview` — sirve el build
+
+## SEO
+- Meta por página (título, descripción, canonical, Open Graph/Twitter) vía `src/components/seo/Seo.jsx`.
+- Datos estructurados JSON-LD del negocio (`src/components/seo/StructuredData.jsx`).
+- Páginas por palabra clave en `src/data/servicePages.js` (una landing por servicio).
+- `public/robots.txt`, `public/sitemap.xml`, `public/og-image.jpg`.
+- `scripts/prerender.js` renderiza cada ruta a HTML estático (Puppeteer) al correr `build:seo`.
 
 ## Estructura
 - `src/components/` — UI (`ui/`), layout (`layout/`), secciones del Home (`home/`)
