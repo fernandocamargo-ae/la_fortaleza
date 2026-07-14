@@ -38,7 +38,7 @@ export default function Hero() {
             <img
               src={logo}
               alt="Servicios y Ventas La Fortaleza"
-              className="relative w-56 rounded-2xl shadow-2xl shadow-black/60 ring-1 ring-white/10 sm:w-72 lg:w-80"
+              className="relative w-56 rounded-2xl shadow-2xl shadow-black/60 ring-1 ring-subtle/10 sm:w-72 lg:w-80"
             />
           </div>
         </Reveal>

@@ -1,6 +1,6 @@
 const VARIANTS = {
   primary: 'bg-brand-orange text-bg-darker hover:bg-brand-orange/90',
-  outline: 'border border-white/40 text-text-primary hover:border-brand-orange hover:text-brand-orange',
+  outline: 'border border-subtle/40 text-text-primary hover:border-brand-orange hover:text-brand-orange',
 };
 
 export default function Button({ variant = 'primary', as: Tag = 'button', className = '', children, ...props }) {

@@ -14,7 +14,7 @@ export default function MatrizCompatibilidad() {
         <Reveal className="mt-8 overflow-x-auto">
           <table className="w-full min-w-[640px] border-collapse text-left text-sm">
             <thead>
-              <tr className="border-b border-white/10 text-xs uppercase tracking-wide text-text-muted">
+              <tr className="border-b border-subtle/10 text-xs uppercase tracking-wide text-text-muted">
                 {HEADERS.map((h) => (
                   <th key={h} className="py-3 pr-4 font-semibold">{h}</th>
                 ))}
@@ -22,7 +22,7 @@ export default function MatrizCompatibilidad() {
             </thead>
             <tbody>
               {COMPAT_MATRIX.map((row) => (
-                <tr key={row.brand} className="border-b border-white/5 transition-colors duration-200 hover:bg-white/5">
+                <tr key={row.brand} className="border-b border-subtle/5 transition-colors duration-200 hover:bg-subtle/5">
                   <td className="py-4 pr-4 font-bold">{row.brand}</td>
                   <td className="py-4 pr-4 font-semibold text-brand-orange">{row.systems}</td>
                   <td className="py-4 pr-4 text-text-muted">{row.application}</td>

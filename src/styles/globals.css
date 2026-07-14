@@ -8,7 +8,14 @@ html, body, #root {
 }
 body {
   margin: 0;
-  background-color: var(--bg-dark);
-  color: var(--text-primary);
+  background-color: rgb(var(--bg-dark));
+  color: rgb(var(--text-primary));
   font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Transición suave para el cambio de tema claro/oscuro en toda la página. */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
 }

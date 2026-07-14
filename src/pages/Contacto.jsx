@@ -19,7 +19,7 @@ const SUBJECTS = [
 const EMPTY = { name: '', company: '', email: '', subject: SUBJECTS[0], message: '' };
 
 const fieldClass =
-  'w-full rounded-md border border-white/15 bg-bg-dark px-4 py-3 text-sm text-text-primary outline-none transition-colors placeholder:text-text-muted/60 focus:border-brand-orange';
+  'w-full rounded-md border border-subtle/15 bg-bg-dark px-4 py-3 text-sm text-text-primary outline-none transition-colors placeholder:text-text-muted/60 focus:border-brand-orange';
 const labelClass = 'mb-1.5 block text-xs font-semibold uppercase tracking-wide text-text-muted';
 
 export default function Contacto() {
@@ -63,7 +63,7 @@ export default function Contacto() {
         <div className="mt-10 grid gap-8 lg:grid-cols-[1.5fr_1fr]">
           {/* Formulario */}
           <Reveal>
-            <form onSubmit={handleSubmit} className="space-y-5 rounded-xl border border-white/10 bg-surface p-6 sm:p-8" noValidate>
+            <form onSubmit={handleSubmit} className="space-y-5 rounded-xl border border-subtle/10 bg-surface p-6 sm:p-8" noValidate>
               <div className="rounded-md border border-brand-orange/30 bg-brand-orange/5 px-4 py-3 text-sm text-text-muted">
                 Ingrese <span className="font-semibold text-text-primary">sus datos de contacto</span>. Con esta
                 información, <span className="font-semibold text-text-primary">La Fortaleza</span> se comunicará con
@@ -118,7 +118,7 @@ export default function Contacto() {
 
           {/* Datos directos */}
           <Reveal delay={120}>
-            <div className="h-full rounded-xl border border-white/10 bg-surface p-6 sm:p-8">
+            <div className="h-full rounded-xl border border-subtle/10 bg-surface p-6 sm:p-8">
               <h2 className="text-lg font-bold uppercase">Medios directos</h2>
 
               <div className="mt-5 space-y-5 text-sm">
@@ -159,7 +159,7 @@ export default function Contacto() {
 
         {/* Ubicación GPS */}
         <Reveal delay={160} className="mt-8">
-          <div className="overflow-hidden rounded-xl border border-white/10 bg-surface">
+          <div className="overflow-hidden rounded-xl border border-subtle/10 bg-surface">
             <iframe
               title="Ubicación de La Fortaleza en Google Maps"
               src={`https://www.google.com/maps?q=${MAP_LOCATION.lat},${MAP_LOCATION.lng}&z=16&output=embed`}
@@ -174,7 +174,7 @@ export default function Contacto() {
                 href={MAP_LOCATION.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center border border-white/40 px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-text-primary transition-colors hover:border-brand-orange hover:text-brand-orange"
+                className="inline-flex items-center justify-center border border-subtle/40 px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-text-primary transition-colors hover:border-brand-orange hover:text-brand-orange"
               >
                 Ver en Google Maps
               </a>

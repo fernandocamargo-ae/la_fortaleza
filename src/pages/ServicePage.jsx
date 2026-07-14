@@ -68,7 +68,7 @@ export default function ServicePage({ slug }) {
               <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-text-muted">Marcas compatibles</p>
               <div className="flex flex-wrap gap-2">
                 {brands.map((brand) => (
-                  <span key={brand} className="border border-white/10 bg-surface px-3 py-1 text-sm font-semibold text-brand-orange">
+                  <span key={brand} className="border border-subtle/10 bg-surface px-3 py-1 text-sm font-semibold text-brand-orange">
                     {brand}
                   </span>
                 ))}

@@ -32,6 +32,19 @@
       content="Eliminación de EGR, DPF y DEF, reprogramación de potencia y certificado PROVIAL para transporte pesado en Guatemala."
     />
     <meta name="twitter:image" content="https://lafortalezagt.com/og-image.jpg" />
+
+    <script>
+      // Aplica el tema guardado antes del primer pintado, para evitar un
+      // parpadeo del tema por defecto (dark) en visitantes con modo claro guardado.
+      (function () {
+        try {
+          var saved = localStorage.getItem('lf-theme');
+          document.documentElement.setAttribute('data-theme', saved === 'light' ? 'light' : 'dark');
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

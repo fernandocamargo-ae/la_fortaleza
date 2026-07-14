@@ -6,10 +6,10 @@ export const SITE_URL = 'https://lafortalezagt.com';
 // rutas siguen en el código (src/pages, src/routes.jsx) para reactivarlas cuando
 // haya requerimiento.
 export const NAV_ITEMS = [
-  { label: 'Servicios', path: '/servicios' },
-  { label: 'Nosotros', path: '/nosotros' },
-  { label: 'Videos', path: '/videos' },
-  { label: 'Contacto', path: '/contacto' },
+  { label: 'SERVICIOS', path: '/servicios' },
+  { label: 'NOSOTROS', path: '/nosotros' },
+  { label: 'VIDEOS', path: '/videos' },
+  { label: 'CONTACTO', path: '/contacto' },
 ];
 
 export const EMERGENCY_ITEM = { label: 'Asistencia de Emergencia', path: '/emergencia' };

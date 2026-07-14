@@ -57,7 +57,7 @@ export default function Especializacion({
               <Reveal key={item.title} delay={i * 80} className="h-full">
                 <Card
                   item={item}
-                  className="h-full border border-white/10 bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-orange/60 hover:shadow-lg hover:shadow-black/30"
+                  className="h-full border border-subtle/10 bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-orange/60 hover:shadow-lg hover:shadow-black/30"
                 >
                   <h3 className="text-xl font-bold">{item.title}</h3>
                   <p className="mt-3 text-sm text-text-muted">{item.description}</p>

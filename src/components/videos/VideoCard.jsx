@@ -6,7 +6,7 @@ export default function VideoCard({ title, description, src, poster }) {
   const [playing, setPlaying] = useState(false);
 
   return (
-    <article className="overflow-hidden border border-white/10 bg-surface">
+    <article className="overflow-hidden border border-subtle/10 bg-surface">
       <div className="relative aspect-video bg-black">
         {playing ? (
           <video

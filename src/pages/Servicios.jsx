@@ -45,7 +45,7 @@ export default function Servicios() {
 
           {/* Carrusel enmarcado */}
           <Reveal delay={200} className="flex justify-center lg:justify-end">
-            <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl shadow-2xl shadow-black/60 ring-1 ring-white/10">
+            <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl shadow-2xl shadow-black/60 ring-1 ring-subtle/10">
               <BackgroundCarousel
                 images={HERO_IMAGES}
                 interval={4000}

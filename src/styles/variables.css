@@ -1,9 +1,23 @@
+/* Valores en tripletes "R G B" (sin rgb()) para que Tailwind pueda aplicar
+   opacidad con la sintaxis color/NN (ej. bg-brand-orange/90). */
 :root {
-  --brand-orange: #E2622F;
-  --brand-slate: #34495E;
-  --bg-dark: #1A1A1A;
-  --bg-darker: #111111;
-  --surface: #2A2A2A;
-  --text-primary: #F5F5F5;
-  --text-muted: #9CA3AF;
+  --brand-orange: 226 98 47;
+  --brand-slate: 52 73 94;
+
+  /* Tema oscuro (por defecto) */
+  --bg-dark: 26 26 26;
+  --bg-darker: 17 17 17;
+  --surface: 42 42 42;
+  --text-primary: 245 245 245;
+  --text-muted: 156 163 175;
+  --subtle: 255 255 255;
+}
+
+:root[data-theme='light'] {
+  --bg-dark: 243 244 246;
+  --bg-darker: 255 255 255;
+  --surface: 255 255 255;
+  --text-primary: 26 26 26;
+  --text-muted: 100 116 139;
+  --subtle: 0 0 0;
 }
