@@ -14,11 +14,11 @@ export default function Navbar() {
     `text-sm font-medium transition-colors ${isActive ? 'text-brand-orange' : 'text-text-primary hover:text-brand-orange'}`;
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className="sticky top-3 z-50 px-3 sm:top-4 sm:px-4">
       <div
-        className={`overflow-hidden rounded-b-3xl border-b border-subtle/10 shadow-lg shadow-black/10 backdrop-blur-md transition-colors ${
-          scrolled || open ? 'bg-bg-darker/85' : 'bg-bg-darker/70'
-        }`}
+        className={`mx-auto max-w-[1400px] overflow-hidden border border-subtle/10 shadow-lg shadow-black/10 backdrop-blur-md transition-colors ${
+          open ? 'rounded-3xl' : 'rounded-full'
+        } ${scrolled || open ? 'bg-bg-darker/85' : 'bg-bg-darker/70'}`}
       >
         <Container className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
