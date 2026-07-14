@@ -5,7 +5,7 @@ import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
 import Reveal from '../components/ui/Reveal';
 import { sendContactForm } from '../services/contactService';
-import { CONTACT_INFO, SOCIAL_LINKS } from '../utils/constants';
+import { CONTACT_INFO, SOCIAL_LINKS, MAP_LOCATION } from '../utils/constants';
 
 const SUBJECTS = [
   'Cotización de servicio',
@@ -156,6 +156,31 @@ export default function Contacto() {
             </div>
           </Reveal>
         </div>
+
+        {/* Ubicación GPS */}
+        <Reveal delay={160} className="mt-8">
+          <div className="overflow-hidden rounded-xl border border-white/10 bg-surface">
+            <iframe
+              title="Ubicación de La Fortaleza en Google Maps"
+              src={`https://www.google.com/maps?q=${MAP_LOCATION.lat},${MAP_LOCATION.lng}&z=16&output=embed`}
+              className="h-80 w-full grayscale-[20%] sm:h-96"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+            <div className="flex flex-wrap items-center justify-between gap-4 p-4 sm:p-6">
+              <p className="text-sm text-text-muted">{CONTACT_INFO.address}</p>
+              <a
+                href={MAP_LOCATION.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center border border-white/40 px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-text-primary transition-colors hover:border-brand-orange hover:text-brand-orange"
+              >
+                Ver en Google Maps
+              </a>
+            </div>
+          </div>
+        </Reveal>
       </Container>
     </Section>
   );

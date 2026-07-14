@@ -6,6 +6,7 @@ import Motores from './pages/Motores';
 import Repuestos from './pages/Repuestos';
 import Flotillas from './pages/Flotillas';
 import Nosotros from './pages/Nosotros';
+import Videos from './pages/Videos';
 import Contacto from './pages/Contacto';
 import Emergencia from './pages/Emergencia';
 import Terminos from './pages/Terminos';
@@ -27,6 +28,7 @@ export default function AppRoutes() {
         <Route path="/repuestos" element={<Repuestos />} />
         <Route path="/flotillas" element={<Flotillas />} />
         <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/videos" element={<Videos />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/emergencia" element={<Emergencia />} />
         <Route path="/terminos" element={<Terminos />} />

@@ -17,6 +17,7 @@ const ROUTES = [
   '/',
   '/servicios',
   '/nosotros',
+  '/videos',
   '/contacto',
   ...SERVICE_SLUGS.map((s) => `/${s}`),
 ];

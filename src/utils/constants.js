@@ -8,6 +8,7 @@ export const SITE_URL = 'https://lafortalezagt.com';
 export const NAV_ITEMS = [
   { label: 'Servicios', path: '/servicios' },
   { label: 'Nosotros', path: '/nosotros' },
+  { label: 'Videos', path: '/videos' },
   { label: 'Contacto', path: '/contacto' },
 ];
 
@@ -79,6 +80,13 @@ export const CONTACT_INFO = {
   address: '4.ª Avenida, Lote 359, Colonia Sebastopol, Zona 3, Escuintla, Guatemala',
   phones: ['+502 4066 5192', '+502 3166 3239'],
   email: 'Lforta001@gmail.com',
+};
+
+// Ubicación GPS exacta del taller (pin verificado en Google Maps).
+export const MAP_LOCATION = {
+  lat: 14.2904539,
+  lng: -90.7782669,
+  mapsUrl: 'https://www.google.com/maps?q=14.2904539,-90.7782669',
 };
 
 export const SOCIAL_LINKS = [
