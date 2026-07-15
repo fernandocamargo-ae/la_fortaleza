@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import Reveal from '../ui/Reveal';
+import Watermark from '../ui/Watermark';
 import logo from '../../assets/images/logo.jpg';
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-bg-darker">
       <div className="absolute inset-0 bg-gradient-to-r from-bg-darker via-bg-darker/95 to-bg-dark" aria-hidden />
+      <Watermark />
       <Container className="relative grid items-center gap-12 py-24 sm:py-32 lg:grid-cols-2">
         {/* Texto */}
         <div>

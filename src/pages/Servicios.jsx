@@ -5,6 +5,7 @@ import Button from '../components/ui/Button';
 import Reveal from '../components/ui/Reveal';
 import BackgroundCarousel from '../components/ui/BackgroundCarousel';
 import Section from '../components/ui/Section';
+import Watermark from '../components/ui/Watermark';
 import Especializacion from '../components/home/Especializacion';
 import MatrizCompatibilidad from '../components/home/MatrizCompatibilidad';
 import PhotoGallery from '../components/gallery/PhotoGallery';
@@ -25,6 +26,7 @@ export default function Servicios() {
       {/* Encabezado */}
       <section className="relative overflow-hidden bg-bg-darker">
         <div className="absolute inset-0 bg-gradient-to-r from-bg-darker via-bg-darker to-bg-dark" aria-hidden />
+        <Watermark />
         <Container className="relative z-10 grid items-center gap-12 py-20 sm:py-28 lg:grid-cols-2">
           {/* Texto */}
           <div>

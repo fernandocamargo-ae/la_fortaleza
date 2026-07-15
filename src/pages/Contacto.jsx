@@ -4,6 +4,7 @@ import Container from '../components/ui/Container';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
 import Reveal from '../components/ui/Reveal';
+import Watermark from '../components/ui/Watermark';
 import { sendContactForm } from '../services/contactService';
 import { CONTACT_INFO, SOCIAL_LINKS, MAP_LOCATION } from '../utils/constants';
 
@@ -41,13 +42,14 @@ export default function Contacto() {
   }
 
   return (
-    <Section className="bg-bg-darker">
+    <Section className="relative overflow-hidden bg-bg-darker">
+      <Watermark align="top" />
       <Seo
         title="Contacto"
         path="/contacto"
         description="Contáctenos para un diagnóstico o cotización: eliminación de EGR/DPF/DEF, reprogramación de potencia, certificado PROVIAL y auxilio en ruta. Escuintla, Guatemala. Tel. +502 4066 5192."
       />
-      <Container>
+      <Container className="relative">
         <Reveal as="p" className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">
           Contacto
         </Reveal>

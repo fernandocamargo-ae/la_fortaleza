@@ -2,6 +2,7 @@ import Seo from '../components/seo/Seo';
 import Container from '../components/ui/Container';
 import Section from '../components/ui/Section';
 import Reveal from '../components/ui/Reveal';
+import Watermark from '../components/ui/Watermark';
 import VideoCard from '../components/videos/VideoCard';
 import { VIDEOS } from '../data/videos';
 
@@ -14,8 +15,9 @@ export default function Videos() {
         description="Videos reales de nuestros trabajos: reprogramación de ECU, diagnóstico computarizado y servicio técnico para transporte y carga pesada en Guatemala."
       />
 
-      <Section className="bg-bg-darker">
-        <Container>
+      <Section className="relative overflow-hidden bg-bg-darker">
+        <Watermark />
+        <Container className="relative">
           <Reveal as="p" className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">
             Galería
           </Reveal>

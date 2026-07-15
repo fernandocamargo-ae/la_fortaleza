@@ -4,6 +4,7 @@ import Container from '../components/ui/Container';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
 import Reveal from '../components/ui/Reveal';
+import Watermark from '../components/ui/Watermark';
 import { ABOUT } from '../utils/constants';
 
 export default function Nosotros() {
@@ -15,8 +16,9 @@ export default function Nosotros() {
         description="Servicios y Ventas La Fortaleza: especialistas en optimización de motores y cumplimiento vial para el transporte pesado en Guatemala. Conozca nuestro origen, misión y visión."
       />
       {/* Origen */}
-      <Section className="bg-bg-darker">
-        <Container>
+      <Section className="relative overflow-hidden bg-bg-darker">
+        <Watermark />
+        <Container className="relative">
           <Reveal as="p" className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">
             Nuestro Origen
           </Reveal>

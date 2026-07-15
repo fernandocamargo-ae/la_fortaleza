@@ -4,6 +4,7 @@ import Container from '../components/ui/Container';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
 import Reveal from '../components/ui/Reveal';
+import Watermark from '../components/ui/Watermark';
 import { SERVICE_PAGES } from '../data/servicePages';
 import NotFound from './NotFound';
 
@@ -20,6 +21,7 @@ export default function ServicePage({ slug }) {
       {/* Encabezado */}
       <section className="relative overflow-hidden bg-bg-darker">
         <div className="absolute inset-0 bg-gradient-to-r from-bg-darker via-bg-darker to-bg-dark" aria-hidden />
+        <Watermark />
         <Container className="relative z-10 py-20 sm:py-24">
           <Reveal as="p" className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">
             {eyebrow}
