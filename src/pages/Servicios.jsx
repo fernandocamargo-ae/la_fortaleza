@@ -4,8 +4,10 @@ import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
 import Reveal from '../components/ui/Reveal';
 import BackgroundCarousel from '../components/ui/BackgroundCarousel';
+import Section from '../components/ui/Section';
 import Especializacion from '../components/home/Especializacion';
 import MatrizCompatibilidad from '../components/home/MatrizCompatibilidad';
+import PhotoGallery from '../components/gallery/PhotoGallery';
 import servicios1 from '../assets/images/servicios1.png';
 import servicios2 from '../assets/images/servicios2.png';
 import servicios3 from '../assets/images/servicios3.png';
@@ -62,6 +64,19 @@ export default function Servicios() {
 
       {/* Matriz de compatibilidad */}
       <MatrizCompatibilidad />
+
+      {/* Galería de trabajos realizados */}
+      <Section className="bg-bg-dark">
+        <Container>
+          <Reveal as="h2" className="text-3xl font-extrabold uppercase sm:text-4xl">Galería de Trabajos</Reveal>
+          <Reveal as="p" delay={80} className="mt-2 text-sm text-text-muted">
+            Fotos reales de diagnósticos, reprogramaciones y servicio en unidades de nuestros clientes.
+          </Reveal>
+          <div className="mt-8">
+            <PhotoGallery />
+          </div>
+        </Container>
+      </Section>
 
       {/* CTA */}
       <section className="bg-brand-orange py-14">
