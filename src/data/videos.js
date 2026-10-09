@@ -6,6 +6,10 @@ import video3 from '../assets/videos/video-3.mp4';
 import video3Poster from '../assets/videos/video-3-poster.jpg';
 import video4 from '../assets/videos/video-4.mp4';
 import video4Poster from '../assets/videos/video-4-poster.jpg';
+import video5 from '../assets/videos/video-5.mp4';
+import video5Poster from '../assets/videos/video-5-poster.jpg';
+import video6 from '../assets/videos/video-6.mp4';
+import video6Poster from '../assets/videos/video-6-poster.jpg';
 
 // Galería de videos del taller. Los títulos/descripciones se pueden ajustar
 // libremente; el nombre de archivo no necesita coincidir con el contenido.
@@ -37,5 +41,19 @@ export const VIDEOS = [
     description: 'Nuestro equipo técnico explicando el trabajo realizado en una de las unidades atendidas.',
     src: video4,
     poster: video4Poster,
+  },
+  {
+    slug: 'reprogramacion-ecu-freightliner-cascadia',
+    title: 'Reprogramación de ECU en Freightliner Cascadia',
+    description: 'Nuestro técnico explica paso a paso la reprogramación de la ECU de un Freightliner Cascadia con motor Detroit, realizada en sitio con equipo de diagnóstico profesional.',
+    src: video6,
+    poster: video6Poster,
+  },
+  {
+    slug: 'prueba-de-ruta-hyundai-xcient',
+    title: 'Prueba de ruta en Hyundai Xcient',
+    description: 'Subida a cabina y prueba de ruta de una unidad Hyundai Xcient para verificar el funcionamiento del motor después del servicio.',
+    src: video5,
+    poster: video5Poster,
   },
 ];
